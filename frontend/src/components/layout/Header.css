@@ -134,7 +134,7 @@ li {
 .nav-nav > li:hover .menu4 { height: 210px; }
 .nav-nav > li:hover .menu5 { height: 84px; }
 
-.right-fixed {
+.search-div {
     display: flex;
     align-items: center;
     margin-left: auto; 

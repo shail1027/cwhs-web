@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.swiper-pagination{
+    position: absolute;
+    bottom: 50px !important;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.swiper-pagination-bullet {
+    background-color: white !important;
+    opacity: 0.5;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transition: width 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #493A71 !important;
+    opacity: 1;
+    width: 20px;
+    border-radius: 5px;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    color: white;
+    opacity: 0.5;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    color: #493A71;
+    opacity: 1;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.says {
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 50px;
+    text-shadow: 2px 2px 8px black;
+}
+
+@keyframes anime-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    40% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.says-anime {
+    animation: anime-lineUp 4s ease-out;
+}

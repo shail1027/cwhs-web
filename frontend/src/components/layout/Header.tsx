@@ -158,7 +158,7 @@ const Header = () => {
         </ul>
 
         {/* 우측 검색창 */}
-        <div className="right-fixed">
+        <div className="search-div">
           <div className="search">
             <input type="text" placeholder="검색어를 입력하세요." />
             <img src="/images/ic_search.png" alt="검색" />
