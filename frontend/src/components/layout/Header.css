@@ -11,7 +11,7 @@ html {
 body {
     font-family: 'Noto Sans KR', sans-serif;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #f9f8fa;
 }
 
 a {
@@ -160,7 +160,7 @@ li {
 }
 
 .search > input:focus {
-    border-bottom-color: #5a4a7a;
+    border-bottom-color: #493A71;;
 }
 
 .search > input::placeholder {

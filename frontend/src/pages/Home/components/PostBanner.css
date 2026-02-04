@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.swiper-containar {
+    width: 100%;
+}
+
+.sub-menu {
+    display: flex;
+    gap: 30px;
+    width: 90%;
+    max-width: 1300px;
+    margin: 80px auto;
+    padding: 0;
+}
+
+.sub-menu1 {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    overflow: hidden; 
+}
+
+.sub-menu1:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.sub-menu-header {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.sub-menu-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #5a4a7a;
+    margin-bottom: 10px;
+}
+
+.sub-menu-header h3 a {
+    color: #5a4a7a;
+    transition: color 0.3s ease;
+}
+
+.sub-menu-header h3 a:hover {
+    color: #7d5fa3;
+}
+
+.accent-line {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #7d5fa3 0%, #b19cd9 100%);
+    border-radius: 2px;
+}
+
+.notice {
+    list-style: none;
+    width: 100%; 
+}
+
+.notice li {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.notice li:last-child {
+    border-bottom: none;
+}
+
+.notice li:hover {
+    background-color: #f8f7fa;
+    padding-left: 8px; 
+}
+
+.notice li a {
+    display: block;
+    flex: 1;           
+    min-width: 0;      
+    margin-right: 15px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+.notice li a:hover {
+    color: #5a4a7a;
+    font-weight: 500;
+}
+
+.notice li .date {
+    flex-shrink: 0;    
+    white-space: nowrap;
+    color: #999;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+        .sub-menu {
+        flex-direction: column; 
+        align-items: center;  
+        gap: 20px;            
+    }
+
+    .sub-menu1 {
+        width: 100%;       
+        max-width: 600px; 
+    }
+}

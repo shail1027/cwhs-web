@@ -22,7 +22,7 @@
 }
 
 .swiper-pagination-bullet-active{
-    background-color: #493A71 !important;
+    background-color: white !important;
     opacity: 1;
     width: 20px;
     border-radius: 5px;
@@ -34,7 +34,7 @@
 }
 
 .swiper-button-next:hover, .swiper-button-prev:hover{
-    color: #493A71;
+    color: white;
     opacity: 1;
     transition: color 0.3s ease, opacity 0.3s ease;
 }
@@ -53,7 +53,7 @@
 @keyframes anime-lineUp {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(80px);
     }
     40% {
         opacity: 0;
@@ -68,6 +68,6 @@
     }
 }
 
-.says-anime {
-    animation: anime-lineUp 4s ease-out;
+.swiper-slide-active .says-anime {
+    animation: anime-lineUp 2.5s ease-out;
 }
