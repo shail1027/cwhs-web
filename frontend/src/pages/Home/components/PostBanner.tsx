@@ -11,7 +11,7 @@ interface MiniBoardProps {
 const PostBanner = ({ title, toLink, posts }: MiniBoardProps) => {
   return (
     <div className="sub-menu1">
-      <div className="sub-menu-header">
+      <div className="sub-menu-header">    
         <h3>
           <Link to={toLink}>{title}</Link>
         </h3>

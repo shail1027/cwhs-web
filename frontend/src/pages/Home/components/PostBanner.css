@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-.swiper-containar {
-    width: 100%;
-}
-
 .sub-menu {
     display: flex;
     gap: 30px;
@@ -44,12 +40,12 @@
     margin-bottom: 10px;
 }
 
-.sub-menu-header h3 a {
+.sub-menu-header h3{
     color: #5a4a7a;
     transition: color 0.3s ease;
 }
 
-.sub-menu-header h3 a:hover {
+.sub-menu-header h3:hover {
     color: #7d5fa3;
 }
 

@@ -1,6 +1,10 @@
 import React from "react";
 import MainBanner from "./components/Mainbanner";
 import PostBanner from "./components/PostBanner";
+import PhotoBanner from "./components/PhotoBanner";
+
+import type { Post } from "../../types";
+
 import "./Home.css";
 
 const Home = () => {
@@ -37,11 +41,66 @@ const Home = () => {
       title: "20nn학년도 교육활동 침해행위 예방교육",
       date: "2026-09-21",
       link: "#",
-    }
+    },
   ];
+
   const collegeData = [
     { id: 1, title: "수시 학교장 추천 전형", date: "2026-08-01", link: "#" },
     { id: 2, title: "서울 진로 박람회", date: "2026-08-05", link: "#" },
+  ];
+
+  const SCHOOL_ALBUM: Post[] = [
+    {
+      id: 1,
+      link: "#",
+      category: "학교앨범",
+      image: "/images/album_cwhs1.jpg",
+    },
+    {
+      id: 2,
+      link: "#",
+      category: "학교앨범",
+      image: "/images/album_cwhs2.jpg",
+    },
+    {
+      id: 3,
+      link: "#",
+      category: "학교앨범",
+      image: "/images/album_cwhs3.jpg",
+    },
+    {
+      id: 4,
+      link: "#",
+      category: "학교앨범",
+      image: "/images/album_cwhs4.jpg",
+    },
+  ];
+
+  const STUDENT_EVENT: Post[] = [
+    {
+      id: 1,
+      link: "#",
+      category: "학생마당",
+      image: "/images/event_cwhs1.jpg",
+    },
+    {
+      id: 2,
+      link: "#",
+      category: "학생마당",
+      image: "/images/event_cwhs2.jpg",
+    },
+    {
+      id: 3,
+      link: "#",
+      category: "학생마당",
+      image: "/images/event_cwhs3.jpg",
+    },
+    {
+      id: 4,
+      link: "#",
+      category: "학생마당",
+      image: "/images/event_cwhs4.jpg",
+    },
   ];
 
   return (
@@ -56,6 +115,19 @@ const Home = () => {
           posts={newsletterData}
         />
         <PostBanner title="진학자료" toLink="/college" posts={collegeData} />
+      </div>
+
+      <div className="photo-banner">
+        <PhotoBanner
+          section_category="학교앨범"
+          section_link="./school-album"
+          posts={SCHOOL_ALBUM}
+        />
+        <PhotoBanner
+          section_category="학생마당"
+          section_link="./student-event"
+          posts={STUDENT_EVENT}
+        />
       </div>
     </div>
   );

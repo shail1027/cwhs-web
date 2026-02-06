@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.swiper-containar {
+    width: 100%;
+}
+
 .swiper-pagination{
     position: absolute;
     bottom: 50px !important;

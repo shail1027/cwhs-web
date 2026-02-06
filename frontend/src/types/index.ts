@@ -6,9 +6,12 @@ export interface HeaderMenu {
 
 export interface Post {
     id: number;
-    title: string;
-    date: string;
+    title?: string;
+    date?: string;
     link: string;
+    category?: string;
+    image?: string;
+    author?: string;
 }
 
 export interface BannerItem {

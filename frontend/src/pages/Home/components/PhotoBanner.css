@@ -1,0 +1,51 @@
+.photo-section-left {
+    flex: 1;
+}
+
+.section-header {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #5a4a7a;
+    margin-bottom: 10px;
+}
+
+.section-header h3{
+    color: #5a4a7a;
+    transition: color 0.3s ease;
+}
+
+.section-header h3:hover {
+    color: #7d5fa3;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-item{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+}
+
+.gallery-item img {
+    width: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
