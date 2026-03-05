@@ -2,10 +2,11 @@ import React from "react";
 import MainBanner from "./components/Mainbanner";
 import PostBanner from "./components/PostBanner";
 import PhotoBanner from "./components/PhotoBanner";
+import QuickMenu from "./components/QuickMenu";
 
 import type { Post } from "../../types";
 
-import "./Home.css";
+import styles from "./Home.module.css";
 
 const Home = () => {
   const noticeData = [
@@ -104,10 +105,10 @@ const Home = () => {
   ];
 
   return (
-    <div className="home-container">
+    <div className={styles["home-containar"]}>
       <MainBanner />
 
-      <div className="sub-menu">
+      <div className={styles["sub-menu"]}>
         <PostBanner title="공지사항" toLink="/notice" posts={noticeData} />
         <PostBanner
           title="학사안내"
@@ -117,7 +118,7 @@ const Home = () => {
         <PostBanner title="진학자료" toLink="/college" posts={collegeData} />
       </div>
 
-      <div className="photo-banner">
+      <div className={styles["photo-banner"]}>
         <PhotoBanner
           section_category="학교앨범"
           section_link="./school-album"
@@ -128,6 +129,9 @@ const Home = () => {
           section_link="./student-event"
           posts={STUDENT_EVENT}
         />
+      </div>
+      <div className={styles["photo-banner"]}>
+        <QuickMenu />
       </div>
     </div>
   );
