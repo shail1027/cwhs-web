@@ -160,7 +160,7 @@ li {
 }
 
 .search > input:focus {
-    border-bottom-color: #493A71;;
+    border-bottom-color: #493A71;
 }
 
 .search > input::placeholder {

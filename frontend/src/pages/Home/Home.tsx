@@ -130,7 +130,7 @@ const Home = () => {
           posts={STUDENT_EVENT}
         />
       </div>
-      <div className={styles["photo-banner"]}>
+      <div className={styles["quick-menu"]}>
         <QuickMenu />
       </div>
     </div>

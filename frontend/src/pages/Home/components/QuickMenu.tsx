@@ -52,7 +52,7 @@ const QuickMenu = () => {
               {" "}
               <Link to={props.linkto}>
                 <div className={styles["list-item"]}>
-                  <Icon />
+                  <Icon className={styles["list-image"]} />
                   <p>{props.name}</p>
                 </div>
               </Link>
