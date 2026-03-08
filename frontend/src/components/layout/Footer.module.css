@@ -1,0 +1,76 @@
+footer {
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+    padding: 40px 0;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0;
+    gap: 50px
+}
+
+.linkto {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: darkgray;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.linkto:not(:last-child)::after{
+    content: "|";
+    margin-left: 50px;
+    color: lightgray;
+    font-size: 13px;
+}
+
+.linkto:hover {
+    color: #493A71;
+}
+
+.content {
+    display: flex;
+    width: 90%;
+    max-width: 1300px;
+    margin: 30px auto;
+    gap: 40px;
+}
+
+.content-img {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content-img img {
+    width: 110px;
+    height: auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-group p {
+    color: darkgray;
+    font-size: 13px;
+    margin: 0;
+}
+
+.info-group p strong{
+    color: gray;
+    font-weight: 000;
+}
+
+.copyright p{
+    color: lightgray;
+    font-size: 12px;
+}
+
+
