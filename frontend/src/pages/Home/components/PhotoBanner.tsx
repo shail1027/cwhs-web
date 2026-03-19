@@ -8,7 +8,7 @@ interface PhotoBannerProps {
   posts: Post[];
 }
 
-const PhotoBannerLeft = ({
+const PhotoBanner = ({
   section_category,
   section_link,
   posts,
@@ -34,4 +34,4 @@ const PhotoBannerLeft = ({
   );
 };
 
-export default PhotoBannerLeft;
+export default PhotoBanner;
