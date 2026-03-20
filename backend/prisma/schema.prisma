@@ -11,3 +11,94 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+enum Role {
+  STUDENT
+  ADMIN
+}
+
+enum Category {
+  NOTICE
+  EVENT
+  ALBUM
+}
+
+enum SenderType {
+  USER
+  BOT
+}
+
+model User {
+  id         Int           @id @default(autoincrement())
+  username   String        @unique
+  password   String
+  role       Role          @default(STUDENT)
+  created_at DateTime      @default(now())
+
+  // 관계 (1:N)
+  posts         Post[]
+  comments      Comment[]
+  chat_sessions ChatSession[]
+}
+
+model Post {
+  id         Int      @id @default(autoincrement())
+  author_id  Int
+  category   Category
+  title      String
+  content    String   @db.Text  
+  view_count Int      @default(0)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt 
+
+  author      User         @relation(fields: [author_id], references: [id], onDelete: Cascade)
+  comments    Comment[]
+  attachments Attachment[]
+}
+
+model Comment {
+  id         Int      @id @default(autoincrement())
+  post_id    Int
+  author_id  Int
+  content    String   @db.Text
+  created_at DateTime @default(now())
+
+  post   Post @relation(fields: [post_id], references: [id], onDelete: Cascade)
+  author User @relation(fields: [author_id], references: [id], onDelete: Cascade)
+}
+
+model Attachment {
+  id            Int    @id @default(autoincrement())
+  post_id       Int
+  original_name String
+  file_url      String
+  file_type     String
+
+  post Post @relation(fields: [post_id], references: [id], onDelete: Cascade)
+}
+
+model MealCache {
+  id         Int      @id @default(autoincrement())
+  serve_date String   @unique 
+  menu_info  String   @db.Text 
+  fetched_at DateTime @default(now())
+}
+
+model ChatSession {
+  id         Int      @id @default(autoincrement())
+  user_id    Int?     
+  created_at DateTime @default(now())
+
+  user     User?         @relation(fields: [user_id], references: [id], onDelete: SetNull)
+  messages ChatMessage[]
+}
+
+model ChatMessage {
+  id         Int        @id @default(autoincrement())
+  session_id Int
+  sender     SenderType
+  message    String     @db.Text
+  created_at DateTime   @default(now())
+
+  session ChatSession @relation(fields: [session_id], references: [id], onDelete: Cascade)
+}
