@@ -18,9 +18,8 @@ enum Role {
 }
 
 enum Category {
-  NOTICE
-  EVENT
-  ALBUM
+  ADMIN_BOARD
+  STUDENT_BOARD
 }
 
 enum SenderType {
@@ -35,7 +34,6 @@ model User {
   role       Role          @default(STUDENT)
   created_at DateTime      @default(now())
 
-  // 관계 (1:N)
   posts         Post[]
   comments      Comment[]
   chat_sessions ChatSession[]
